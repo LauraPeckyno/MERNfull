@@ -8,6 +8,7 @@ function checkToken(req, res) {
   res.json(req.exp);
 }
 
+// creating the JWT token
 function createJWT(user) {
   console.log("Creating JWT");
   return jwt.sign(
@@ -18,6 +19,7 @@ function createJWT(user) {
   );
 }
 
+// creating the user
 async function create(req, res) {
   try {
     let user = await User.create(req.body);

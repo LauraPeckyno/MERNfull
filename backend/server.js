@@ -44,6 +44,7 @@ app.put("/notes/:id", notesController.updateNote);
 app.delete("/notes/:id", notesController.deleteNote);
 // +++++++++++++ {DELETE} ++++++++++++++
 // -------------------------------------------------------[userRoutes]
+// log in functinality related
 app.post('/api/users', usersController.create);
 app.post('api/users/login', usersController.login);
 app.get('api/users/check-token', ensureLoggedIn, usersController.checkToken)
